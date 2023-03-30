@@ -1,0 +1,31 @@
+.register-input-wrap {
+    width: 100% !important;
+}
+
+.register-input-wrap input {
+    width: 370px;
+    background-color: var(--background-secondary);
+}
+
+.input-error-background {
+    max-width: 300px;
+}
+
+.error-arrow-bottom {
+    transform: translate(1px);
+}
+
+@media screen and (min-width:539px) {
+    .register-input-wrap input-error-background {
+        max-width: 100%;
+    }
+}
+
+.error-arrow-right {
+    border-right: 10px solid rgb(246, 46, 73);
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    position: absolute;
+    left: -10px;
+    top: 14px;
+}

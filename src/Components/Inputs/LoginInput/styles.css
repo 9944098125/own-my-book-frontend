@@ -1,0 +1,105 @@
+.input-container {
+    position: relative;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container input {
+    outline: none;
+    border: 1px solid var(--bg-third);
+    background-color: var(--bg-primary);
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    color: var(--dark-color-primary);
+    font-size: 20px;
+    font-family: 'Alkatra', cursive;
+}
+
+.input-container input :focus
+.input-container input:active{
+    border: 2px solid rgb(81, 181, 253);
+}
+
+.error-field {
+    border: 2px solid rgb(247, 74, 112) !important;
+}
+
+.error-icon {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.input-error-background {
+    position: relative;
+    padding: 15px 10px;
+    background-color: rgb(246, 46, 73);
+    font-size: 13px;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.error-arrow-top {
+    border-top: 10px solid rgb(246, 46, 73);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+}
+
+.error-arrow-bottom {
+    border-bottom: 10px solid rgb(246, 46, 73);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+}
+
+.error-arrow-left {
+    border-left: 10px solid rgb(246, 46, 73);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    right: -10px;
+    top: 13px;
+  }
+
+.input-error-desktop {
+    position: absolute;
+    width: 300px;
+    left: -19.5rem;
+    top: -3px;
+}
+
+.eye-icon {
+    position: absolute;
+    margin-top: -10px;
+    font-size: 25px;
+    cursor: pointer;
+    right: 10px;
+    top: 25px;
+}
+
+.eye-icon-with-error {
+    position: absolute;
+    margin-top: -10px;
+    font-size: 25px;
+    cursor: pointer;
+    right: 40px;
+    top: 25px;
+}
+
+@media screen and (max-width:768px) {
+    .eye-icon-with-error {
+        right: 10px;
+    }
+}

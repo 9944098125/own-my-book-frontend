@@ -1,0 +1,172 @@
+.login_footer {
+    background-color: #ffffff;
+    height: 30vh;
+    padding: 15px;
+}
+
+@media screen and (max-width:786px) {
+  .login_footer {
+    display: none;
+  }
+}
+
+.login_footer_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.768);
+    bottom: 0;
+    z-index: 9999999999;
+  }
+
+  .register {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-primary);
+    box-shadow: 0 1px 2px var(--shadow-1);
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 1rem;
+    width: 350px;
+    height: fit-content;
+    color: var(--color-primary);
+  }
+
+  @media screen and (max-width:768px) {
+    .register {
+      position: relative;
+      top: none;
+      left: none;
+      height: 100%;
+    }
+  }
+
+  .register-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--bg-third);
+  }
+
+  .register-header .close-icon {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+  }
+
+  .register-header span:first-of-type {
+    font-weight: 700;
+    font-size: 32px;
+    color: rgb(38, 160, 241) !important;
+  }
+
+  .register-header span:last-of-type {
+    font-size: 14px;
+  }
+
+  .register-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .register-line {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .register-col {
+    position: relative;
+    align-self: flex-start;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+
+  .register-line-header {
+    display: flex;
+    align-items: center;
+    color: rgb(73, 71, 71) !important;
+  }
+
+  .register-grid {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:15px;
+    height: 35px;
+    width: 100%;
+  }
+
+  .register-grid select {
+    width: 90px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .register-grid select::-webkit-scrollbar {
+    display: none;
+  }
+
+  .register-grid label {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid grey;
+    padding: 3px 8px;
+    border-radius: 6px;
+    color: grey !important;
+  }
+
+  @media screen and (min-width:530px) {
+    .register {
+      width: 400px;
+    }
+    .register-line {
+      flex-direction: row;
+      gap: 10px;
+    }
+    .register-grid select,
+    .register-grid label {
+      width: 110px;
+    }
+  }
+
+  .register-grid .input-error-background {
+    width: 300px;
+    position: absolute;
+    top: 70px;
+  }
+
+  .error-text {
+    color: rgb(232, 56, 56);
+  }
+
+  .password_input {
+    display: flex;
+    align-items: center;
+  }
+
+  .password_input svg {
+    margin-left: -70px;
+    z-index: 99;
+  }

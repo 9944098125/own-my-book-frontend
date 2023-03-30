@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
+/* primary color => #ff003d */
+/* font-family: 'Alkatra', cursive; */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  body {
+    font-family: 'Alkatra', cursive;
   }
-  to {
-    transform: rotate(360deg);
+  :root {
+    --bg-primary: #fff5ff;
+    --bg-header:#e0e7f1;
+    --bg-secondary: #ffffff;
+    --bg-third: #c3d0e4;
+    --bg-forth: #ffffff;
+    --color-primary: #3a5f7e;
+    --color-secondary: #878787;
+    --divider: #a4a8b1;
+    --dark-bg-primary: #18191a;
+    --dark-bg-secondary: #224263;
+    --dark-bg-third: #4c2b6b;
+    --dark-bg-forth: #46006b;
+    --dark-color-primary: #002b57;
+    --dark-color-secondary: #b0b3b8;
+    --pink-color: #550f92;
+    --green-color: #0087bc;
+    --light-green-color: #d2f1e1;
+    --border-color: #ccced2;
+    --shadow-1: rgba(0, 0, 0, 0.2);
+    --shadow-2: rgba(0, 0, 0, 0.1);
+    --shadow-3: rgba(0, 0, 0, 0.3);
+    --shadow-inset: rgba(255, 255, 255, 0.5);
   }
+
+  /* --------LOGIN--------- */
+  .blue-btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-weight: 600;
+    color: white;
+    display:flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--blue-color);
+  }
+
+  input::placeholder {
+    color: rgb(198, 190, 190);
+    font-family: 'Alkatra', cursive;
+  }
+   /* --------LOGIN--------- */
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.outlet {
+  height: 90vh;
+  overflow-y: scroll;
 }

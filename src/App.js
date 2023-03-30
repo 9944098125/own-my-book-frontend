@@ -1,9 +1,12 @@
+import React from "react";
+import BaseRoutes from "./Routing/routes";
+
 import "./App.css";
 
 function App() {
   return (
     <>
-      <div>Hello world</div>
+      <BaseRoutes />
     </>
   );
 }

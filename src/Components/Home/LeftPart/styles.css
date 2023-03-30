@@ -1,0 +1,129 @@
+.left_home {
+    position: fixed;
+    left: 6px;
+    max-height: 100vh;
+    overflow-y: scroll;
+    width: 250px;
+    color: var(--color-primary);
+    padding: 15px 10px;
+    padding-bottom: 5rem;
+    user-select: none;
+    border-right: 0.5px solid var(--color-primary);
+}
+
+.left_link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.left_link img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+}
+
+.left_link span {
+    margin-bottom: 4px;
+    margin-left: 1px;
+  }
+  .col {
+    margin-left: 2px;
+    transform: translateY(-2px);
+  }
+  .col_1 {
+    transform: translateX(-1px);
+  }
+
+.col_2 {
+    position: relative;
+  font-size: 12px;
+  color: var(--pink-color);
+  margin-left: 9px;
+  margin-top: 2px;
+  font-weight: normal;
+}
+
+.col_2::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--pink-color);
+    position: absolute;
+    left: -10px;
+    bottom: 8px;
+  }
+
+  .splitter {
+    height: 0.8px;
+    background-color: var(--divider);
+    margin: 20px 10px;
+  }
+
+  .shortcut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .edit_shortcut {
+    color: var(--pink-color);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: none;
+  }
+
+  .shortcut:hover .edit_shortcut {
+    display: block;
+  }
+
+  .heading {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--color-secondary);
+  }
+
+  .shortcut_item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+    color: var(--color-primary) !important;
+    text-decoration: none;
+  }
+
+  .shortcut_item img {
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .mb_copyright {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    font-size: 12px;
+    color: var(--color-secondary);
+    display: inline;
+  }
+
+  .relative_mb_copyright {
+    position: fixed;
+    font-size: 12px;
+    color: var(--color-secondary);
+    background-color: white;
+    display: inline;
+  }
+
+  .left_home .small_circle {
+    background: rgb(214, 214, 214);
+  }
