@@ -106,7 +106,7 @@ function LoginForm({ setVisible }) {
             {error && <div className="error-text">{error}</div>}
             <Link
               className="forgot-password"
-              to="/forgot-password"
+              to="/reset"
               style={{ color: "inherit", textDecoration: "none" }}
             >
               Forgot Password ?

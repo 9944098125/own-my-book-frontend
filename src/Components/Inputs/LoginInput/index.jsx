@@ -38,7 +38,7 @@ const LoginInput = ({ placeholder, bottom, ...props }) => {
         <input
           className={meta.touched && meta.error ? "error-field" : ""}
           type={
-            field.name === "password"
+            field.name === "password" || field.name === "confirmPassword"
               ? showPassword
                 ? "text"
                 : "password"
@@ -49,7 +49,7 @@ const LoginInput = ({ placeholder, bottom, ...props }) => {
           {...field}
           {...props}
         />
-        {field.name === "password" &&
+        {(field.name === "password" || field.name === "confirmPassword") &&
           (showPassword ? (
             <MdVisibilityOff
               onClick={toggleShowPassword}

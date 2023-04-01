@@ -3,6 +3,8 @@ import Login from "../Pages/Login";
 import Home from "../Pages/Home";
 import Profile from "../Pages/Profile";
 import Header from "../Components/Header";
+import Activate from "../Pages/Home/activate";
+import ResetPassword from "../Pages/ResetPassword";
 
 const Layout = () => {
   return (
@@ -21,6 +23,10 @@ const routes = createBrowserRouter([
     element: <Login />,
   },
   {
+    path: "/reset",
+    element: <ResetPassword />,
+  },
+  {
     path: "/",
     element: <Layout />,
     children: [
@@ -31,6 +37,10 @@ const routes = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />,
+      },
+      {
+        path: "/activate/:token",
+        element: <Activate />,
       },
     ],
   },

@@ -1,14 +1,13 @@
 header {
     position: relative;
     top: 0;
-    height: 10vh;
     width: 100%;
     background-color: var(--bg-header);
     box-shadow: 1px 8px 15px -7px var(--shadow-2);
     z-index: 99;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 5px 20px;
+    padding: 10px 20px;
 }
 
 .header-logo {
@@ -48,6 +47,12 @@ header {
     font-size: 18px;
 }
 
+@media screen and (max-width:1030px) {
+  .search input {
+    display: none;
+  }
+}
+
 .header-middle {
     display: flex;
     align-items: center;
@@ -60,7 +65,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 95px;
+  width: 60px !important;
   height: 40px;
   border-radius: 10px;
   cursor: pointer;

@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import CreatePost from "../../Components/CreatePost";
 import LeftPart from "../../Components/Home/LeftPart";
 import RightPart from "../../Components/Home/RightPart";
+import SendVerification from "../../Components/Home/SendVerfication";
 import Stories from "../../Components/Home/Stories";
 
 import "./styles.css";
@@ -25,6 +27,8 @@ const Home = () => {
         <LeftPart user={user} />
         <div className="home_middle">
           <Stories />
+          {user?.verified === false && <SendVerification user={user} />}
+          <CreatePost user={user} />
         </div>
         <RightPart user={user} />
       </div>

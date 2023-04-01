@@ -7,6 +7,8 @@ export default function userReducer(
   switch (action.type) {
     case "LOGIN":
       return action.payload;
+    case "VERIFY":
+      return { ...state, verified: action.payload };
     case "LOGOUT":
       localStorage.removeItem("user", null);
       return null;

@@ -8,7 +8,7 @@ function Contact({ user }) {
           <img src={user?.picture} alt="" />
         </div>
         <span>
-          {user.firstName} {user.lastName}
+          {user?.firstName} {user?.lastName}
         </span>
       </div>
     </React.Fragment>

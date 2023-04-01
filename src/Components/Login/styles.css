@@ -4,7 +4,7 @@
     padding: 15px;
 }
 
-@media screen and (max-width:786px) {
+@media screen and (max-width:850px) {
   .login_footer {
     display: none;
   }

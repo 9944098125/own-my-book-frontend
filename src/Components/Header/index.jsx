@@ -80,11 +80,11 @@ const Header = () => {
             className="profile-link hover1"
           >
             <img
-              src={user ? user.picture : ""}
+              src={user?.picture}
               alt="profile"
               className="profile-picture"
             />
-            <span>{user ? user.firstName : ""}</span>
+            <span>{user?.firstName}</span>
           </Link>
           <div>
             <div
