@@ -92,7 +92,14 @@ export default function ResetPassword() {
             />
           )}
           {visible === 2 && (
-            <CodeVerification code={code} setCode={setCode} error={error} />
+            <CodeVerification
+              userInfo={userInfo}
+              code={code}
+              setCode={setCode}
+              error={error}
+              setError={setError}
+              setVisible={setVisible}
+            />
           )}
           {visible === 3 && (
             <ChangePassword
@@ -101,6 +108,9 @@ export default function ResetPassword() {
               setPassword={setPassword}
               setConfirmPassword={setConfirmPassword}
               error={error}
+              email={email}
+              setError={setError}
+              user={user}
             />
           )}
         </div>

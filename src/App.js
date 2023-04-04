@@ -2,10 +2,13 @@ import React from "react";
 import BaseRoutes from "./Routing/routes";
 
 import "./App.css";
+import CreatePostPopup from "./Components/CreatePostPopup";
 
 function App() {
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <>
+      <CreatePostPopup user={user} />
       <BaseRoutes />
     </>
   );

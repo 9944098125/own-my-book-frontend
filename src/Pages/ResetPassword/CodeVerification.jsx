@@ -3,19 +3,38 @@ import React from "react";
 import LoginInput from "../../Components/Inputs/LoginInput";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import axios from "axios";
 
+import { baseUrl } from "../../baseUrl";
 import "./styles.css";
 
-function CodeVerification({ error, code, setCode, setError }) {
-  const verifyCode = async () => {
-    try {
-    } catch (err) {
-      setError(err.response.data.message);
-    }
-  };
+function CodeVerification({
+  error,
+  code,
+  setCode,
+  setError,
+  userInfo,
+  setVisible,
+}) {
   const validationSchema = Yup.object({
     code: Yup.string().required("Must Provide a Code..."),
   });
+
+  const verifyCode = async () => {
+    const { email } = userInfo;
+    try {
+      await axios.post(`${baseUrl}/users/validateResetCode`, {
+        email,
+        code,
+      });
+      setError("");
+      setVisible(3);
+    } catch (err) {
+      setError(err.response.data.message);
+      console.log(code, email);
+    }
+  };
+
   return (
     <React.Fragment>
       <div className="reset_form">

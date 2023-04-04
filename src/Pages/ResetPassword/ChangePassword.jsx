@@ -1,8 +1,12 @@
 import { Form, Formik } from "formik";
 import React from "react";
 import LoginInput from "../../Components/Inputs/LoginInput";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import axios from "axios";
+
+import { baseUrl } from "../../baseUrl";
+import "./styles.css";
 
 function ChangePassword({
   error,
@@ -10,7 +14,11 @@ function ChangePassword({
   confirmPassword,
   setPassword,
   setConfirmPassword,
+  setError,
+  email,
+  user,
 }) {
+  const navigate = useNavigate();
   const validationSchema = Yup.object({
     password: Yup.string()
       .required("Password is required")
@@ -22,6 +30,20 @@ function ChangePassword({
       .required("Confirm your password.")
       .oneOf([Yup.ref("password")], "Passwords must match."),
   });
+
+  const changePassword = async () => {
+    try {
+      await axios.patch(`${baseUrl}/users/changePassword`, { email, password });
+      setError("");
+      if (user === null) {
+        navigate("/login");
+      } else {
+        navigate("/");
+      }
+    } catch (err) {
+      setError(err.response.data.message);
+    }
+  };
 
   return (
     <React.Fragment>
@@ -35,9 +57,9 @@ function ChangePassword({
             confirmPassword,
           }}
           validationSchema={validationSchema}
-          // onSubmit={() => {
-          //   verifyCode();
-          // }}
+          onSubmit={() => {
+            changePassword();
+          }}
         >
           {(formik) => (
             <Form>
