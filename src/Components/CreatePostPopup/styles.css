@@ -84,28 +84,30 @@
     position: absolute;
   }
   .post_emojis_wrap {
-    position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     padding: 10px 15px;
+    width: 100%;
   }
   .post_emojis_wrap img {
     width: 39px;
     cursor: pointer;
+    border-radius: 4px;
   }
-  .post_emojis_wrap i:hover {
-    filter: invert(80%);
+  .post_emojis_wrap svg:hover {
+    filter: invert(50%);
+    cursor: pointer;
   }
   .comment_emoji_picker {
     position: absolute;
     right: 0;
-    bottom: 2.5rem;
+    bottom: 3rem;
   }
-  .rlmove {
+  .r_l_move {
     right: -7rem;
   }
-  .addtoyourpost {
+  .addToYourPost {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -114,7 +116,7 @@
     border-radius: 10px;
     border: 3px solid var(--bg-forth);
   }
-  .addto_text {
+  .addTo_text {
     width: 50%;
     font-weight: 600;
     font-size: 14px;
@@ -134,7 +136,7 @@
     padding: 10px;
     outline: none;
     border: none;
-    background: var(--blue-color);
+    background: var(--color-secondary);
     color: #fff;
     font-weight: 600;
     border-radius: 5px;

@@ -2,17 +2,28 @@ import React from "react";
 import { AiOutlineClose, AiFillCaretDown } from "react-icons/ai";
 import { BsGlobeAmericas } from "react-icons/bs";
 
+import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
+import AddToYourPost from "./AddToYourPost";
 import "./styles.css";
+import ImagePreview from "./ImagePreview";
 
-export default function CreatePostPopup({ user }) {
+export default function CreatePostPopup({ user, setShowCreatePost }) {
   const [text, setText] = React.useState();
-  const [showPreview, setShowPreview] = React.useState(false);
+  const [showPreview, setShowPreview] = React.useState(true);
+
+  const [images, setImages] = React.useState([]);
+
+  const textRef = React.useRef(null);
+
   return (
     <React.Fragment>
       <div className="blur">
         <div className="postBox">
           <div className="box_header">
-            <div className="small_circle">
+            <div
+              onClick={() => setShowCreatePost(false)}
+              className="small_circle"
+            >
               <AiOutlineClose />
             </div>
             <span>Create Post</span>
@@ -30,17 +41,24 @@ export default function CreatePostPopup({ user }) {
               </div>
             </div>
           </div>
-          <div className="flex_center">
-            {showPreview && (
-              <textarea
-                placeholder={`What's on your mind ? ${user?.firstName}`}
-                className="post_input"
-                maxLength="100"
-                value={text}
-                onChange={(e) => setText(e.target.value)}
+          {!showPreview ? (
+            <>
+              <EmojiPickerBackgrounds
+                textRef={textRef}
+                text={text}
+                setText={setText}
               />
-            )}
-          </div>
+            </>
+          ) : (
+            <ImagePreview
+              textRef={textRef}
+              text={text}
+              setText={setText}
+              user={user}
+            />
+          )}
+          <AddToYourPost />
+          <button className="post_submit">Post</button>
         </div>
       </div>
     </React.Fragment>
