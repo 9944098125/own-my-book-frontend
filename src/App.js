@@ -1,19 +1,11 @@
 import React from "react";
 import BaseRoutes from "./Routing/routes";
-import CreatePostPopup from "./Components/CreatePostPopup";
 
 import "./App.css";
 
 function App() {
-  const user = JSON.parse(localStorage.getItem("user"));
-
-  const [showCreatePost, setShowCreatePost] = React.useState(true);
-
   return (
     <>
-      {showCreatePost && user && (
-        <CreatePostPopup setShowCreatePost={setShowCreatePost} user={user} />
-      )}
       <BaseRoutes />
     </>
   );
